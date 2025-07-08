@@ -3,43 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <title>Enzo Ouisse - Athlète</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; max-width: 700px; margin: auto; background: #f6f6f6; }
-    .profile-pic { border-radius: 50%; width: 180px; margin-top: 20px;}
-    .socials a { margin: 0 20px; font-size: 20px; }
-    .actus { background: #fff; padding: 20px; margin-top: 40px; border-radius: 12px;}
-    .actu-item { margin-bottom: 10px;}
-    .actu-item a { text-decoration: none; color: #2557a7; }
-    .actu-item a:hover { text-decoration: underline; }
-    header { text-align: center; margin-top: 30px;}
+    body {
+      background: #fff;
+      color: #222;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .top-block {
+      text-align: center;
+      padding-top: 40px;
+      position: relative;
+    }
+    .profile-photo {
+      width: 185px;
+      height: 185px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: 3px solid #ebebeb;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+    }
+    .profile-name {
+      position: absolute;
+      left: 0; right: 0;
+      top: 175px; /* positionné sur la photo */
+      font-size: 2.1em;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      color: #222;
+      text-shadow: 0px 2px 8px rgba(255,255,255,0.8);
+      text-align: center;
+      pointer-events: none;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 60px 0 36px 0;
+    }
+    nav a {
+      color: #222;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.07em;
+      padding: 6px 18px;
+      border-radius: 7px;
+      transition: background 0.14s;
+    }
+    nav a:hover {
+      background: #f7f7f7;
+    }
+    .bio {
+      max-width: 420px;
+      margin: 0 auto 50px auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: center;
+      color: #444;
+    }
+    .socials-bottom {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 36px 0 24px 0;
+      align-items: center;
+    }
+    .socials-bottom a {
+      text-decoration: none;
+      color: #222;
+      font-size: 1.75em;
+      display:inline-flex;
+      align-items:center;
+      gap: 7px;
+      opacity:0.8;
+      transition: opacity .21s;
+    }
+    .socials-bottom a:hover {
+      opacity: 1;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .profile-photo { width: 115px; height: 115px;}
+      .profile-name { font-size: 1.3em; top: 120px;}
+      .bio { font-size:1em;}
+    }
   </style>
+  <!-- Icônes Font Awesome pour Instagram et Strava -->
+  <script src="https://kit.fontawesome.com/97e08bc9c5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <img src="https://drive.google.com/file/d/1uFsbxYbrRqCknuCRNFgq8hM-joI_qbtF/view?usp=drive_link" class="profile-pic" alt="Enzo Ouisse">
-    <h1>Enzo Ouisse</h1>
-    <h2>Athlète - Cross, Piste & Route</h2>
-    <div class="socials">
-      <a href="https://www.instagram.com/enzoooo.17/" target="_blank">Instagram</a>
-      <a href="https://www.strava.com/athletes/45480316?oq=enzo" target="_blank">Strava</a>
+  <div class="top-block">
+    <div style="position:relative; display: inline-block;">
+      <!-- Remplace le src par ta vraie URL d'image (lien direct .jpg ou .png) -->
+      <img src="https://randomuser.me/api/portraits/men/75.jpg" class="profile-photo" alt="Enzo Ouisse">
+      <div class="profile-name">Enzo Ouisse</div>
     </div>
-    <p>Bienvenue ! Étudiant, passionné par l’athlétisme. Retrouvez ici mon actualité et mes résultats !</p>
-  </header>
-  
-  <section class="actus">
-  <h2>Actualités</h2>
-  <div class="actu-item">
-    <a href="semaine-1.html">Semaine 1 (03 au 10 juin 2024)</a>
   </div>
-  <div class="actu-item">
-    <a href="semaine-2.html">Semaine 2 (11 au 17 juin 2024)</a>
+  <nav>
+    <a href="index.html">Actualités</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="bio">
+    Étudiant à Saint-Avé, passionné par l’athlétisme (cross, piste, route, trail), membre du CASA Athlé Pays de Vannes.<br>
+    Suivez mes actus, mes objectifs, et mes progrès sportifs !
   </div>
-  <div class="actu-item">
-    <a href="semaine-3.html">Semaine 3 (18 au 24 juin 2024)</a>
+  <!-- Ici tu peux ajouter la partie "actualités" ou "actus" sur index.html -->
+  <!-- ... -->
+  <div class="socials-bottom">
+    <a href="https://www.instagram.com/enzoooo.17/" target="_blank" title="Instagram">
+      <i class="fab fa-instagram"></i> 
+      <span class="sr-only">Instagram</span>
+    </a>
+    <a href="https://www.strava.com/athletes/45480316?oq=enzo" target="_blank" title="Strava">
+      <i class="fab fa-strava"></i> 
+      <span class="sr-only">Strava</span>
+    </a>
   </div>
-    <div style="margin-top:40px; text-align:center;">
-  <a href="contact.html" style="font-size:18px; color:#2557a7; text-decoration:none;">Contact</a>
-</div>
-</section>
 </body>
 </html>
